@@ -8,39 +8,39 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "categoria")
-public class Categoria {
+@Table(name = "category")
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "codigo")
-    private Long codigo;
+    @Column(name = "code")
+    private Long code;
 
-    @Column(name = "nome")
-    private String nome;
+    @Column(name = "name")
+    private String name;
 
-    public Long getCodigo() {
-        return codigo;
+    public Long getCode() {
+        return code;
     }
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
+    public void setCode(Long code) {
+        this.code = code;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-        result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+        result = prime * result + ((code == null) ? 0 : code.hashCode());
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
         return result;
     }
 
@@ -52,16 +52,16 @@ public class Categoria {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Categoria other = (Categoria) obj;
-        if (codigo == null) {
-            if (other.codigo != null)
+        Category other = (Category) obj;
+        if (code == null) {
+            if (other.code != null)
                 return false;
-        } else if (!codigo.equals(other.codigo))
+        } else if (!code.equals(other.code))
             return false;
-        if (nome == null) {
-            if (other.nome != null)
+        if (name == null) {
+            if (other.name != null)
                 return false;
-        } else if (!nome.equals(other.nome))
+        } else if (!name.equals(other.name))
             return false;
         return true;
     }
